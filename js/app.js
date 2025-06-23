@@ -11,12 +11,9 @@ function alterarStatus(id) {
         botao.classList.remove('dashboard__item__button--return');
         botao.classList.add('dashboard__item__button');
         botao.innerText = "Alugar";
-
-        nomeJogo.classList.remove('dashboard__item__name--unavailable');
     } else {
         img.classList.add('dashboard__item__img--rented');
         botao.classList.add('dashboard__item__button--return');
         botao.innerText = "Devolver";
-        nomeJogo.classList.innerText.add('dashboard__item__name');
     }
 }
