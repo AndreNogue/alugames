@@ -1,3 +1,10 @@
+let jogosAlugados = 0+1;
+// Variável para contar os jogos alugados
+function contarJogosoAlugados(){
+    console.log(`Total de jogos alugados: ${jogosAlugados}`);
+}
+
+
 function alterarStatus(id) {
     let gameClicado = document.getElementById(`game-${id}`);
     let img =  gameClicado.querySelector('.dashboard__item__img');
@@ -15,9 +22,13 @@ function alterarStatus(id) {
         botao.classList.remove('dashboard__item__button--return');
         botao.classList.add('dashboard__item__button');
         botao.innerText = "Alugar";
+        jogosAlugados--;
     } else {
         img.classList.add('dashboard__item__img--rented');
         botao.classList.add('dashboard__item__button--return');
         botao.innerText = "Devolver";
+        jogosAlugados++;
     }
+    // Atualiza o contador de jogos alugados
+    contarJogosoAlugados();
 }
